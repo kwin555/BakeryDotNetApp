@@ -16,7 +16,7 @@ namespace BakeryApp
         {
             CreateWebHostBuilder(args).Build().Run();
         }
-
+        //setup the enviroment
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
