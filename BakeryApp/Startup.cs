@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BakeryApp.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +18,8 @@ namespace BakeryApp
         {
             //registering services for the app (framework and our own services)
             //app now knows about MVC
+            services.AddTransient<IPieRepository, MockPieRepository>();
+            
             services.AddMvc();
         }
 
