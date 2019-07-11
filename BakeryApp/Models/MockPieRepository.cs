@@ -35,7 +35,7 @@ namespace BakeryApp.Models
 
         public Pie GetPieById(int pieId)
         {
-            _pies.FirstOrDefault<Pie>(pie => pie.Id == pieId);
+            return _pies.FirstOrDefault<Pie>(pie => pie.Id == pieId);
         }
     }
 }
