@@ -47,6 +47,8 @@ namespace BakeryApp
             //shows status code
             app.UseStatusCodePages();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
